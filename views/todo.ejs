@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Todo App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Kalam:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="col-md-4 offset-md-4">
+      <div class="form-bg mt-5">
+  <h1>Todo App</h1>
+    <form action="/todo/new" method="post">
+      <div class="container">
+      <div class="form-row">
+        <div class="col">
+      <input class="form-control" type="text" name="title" placeholder="Todo Title">
+    </div>
+    <div class="col">
+      <input class="form-control" type="text" name="description" placeholder="Todo Description">
+    </div>
+      <button class="btn btn-outline-dark"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+    </form>
+
+  <% allTodos.forEach(function(todo){ %>
+    <div class="container">
+    <form class="todo-font" action="/todo/<%= todo._id %>?_method=DELETE" method="post" id="form1">
+      <ul class="list-group">
+      <li class="list-group-item ul-bg"><%= todo.title%>: <%= todo.description%></li>
+      <button class="btn btn-bg" form="form1"><i class="fas fa-trash-alt"></i></button>
+    </ul>
+    </form>
+  </div>
+  <% }) %>
+
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

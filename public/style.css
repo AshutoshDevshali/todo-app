@@ -1,0 +1,44 @@
+body {
+            background-color: #eaeaea;
+}
+
+h1 {
+  color: #efedd5;
+  font-family: 'Julius Sans One';
+  font-weight: 400;
+  text-align: center;
+}
+
+.bg {
+  background-color: #eaecef;
+}
+
+.form-bg {
+    box-shadow: 0 0 15px 7px #887df7;
+    opacity: 0.8;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.fa-trash-alt {
+  color: #efefef;
+  font-weight: bold;
+}
+
+.fa-plus {
+  color: #eaeaea;
+}
+
+.todo-font {
+  color: #fff;
+  font-family: 'Kalam';
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.ul-bg {
+      background-color: transparent;
+}
+
+.btn-bg {
+  background-color: transparent;
+}
